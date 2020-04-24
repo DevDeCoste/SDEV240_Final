@@ -39,7 +39,11 @@ int main() {
     }
     else if (choice == 2) {
         //Subtraction
-
+        cout << "Please enter the first number to subtract: ";
+        cin >> a;
+        cout << "Please enter the second number to subtract: ";
+        cin >> b;
+        comp.subtract(a, b);
     }
     else if (choice == 4) {
         //Multiply
