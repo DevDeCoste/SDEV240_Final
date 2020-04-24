@@ -23,43 +23,65 @@ double a, b;
 
 int main() {
 
-	//This is a test comment for git purposes
-	//Another quick test
-	alert.displayMenu();
+    bool repeat = true;
 
-    choice = getChoice(1, 5);
+    do
+    {
+        //This is a test comment for git purposes
+    //Another quick test
+        alert.displayMenu();
 
-    if (choice == 1) {
-        //Addition
-        cout << "Please enter the first number to add: ";
-        cin >> a;
-        cout << "Please enter the second number to add: ";
-        cin >> b;
-        comp.add(a,b);
-    }
-    else if (choice == 2) {
-        //Subtraction
-        cout << "Please enter the first number to subtract: ";
-        cin >> a;
-        cout << "Please enter the second number to subtract: ";
-        cin >> b;
-        comp.subtract(a, b);
-    }
-    else if (choice == 4) {
-        //Multiply
+        choice = getChoice(1, 6);
 
-    }
-    else if (choice == 5) {
-        //Divide
+        if (choice == 1) {
+            //Addition
+            cout << "Please enter the first number to add: ";
+            cin >> a;
+            cout << "Please enter the second number to add: ";
+            cin >> b;
+            comp.add(a, b);
+        }
+        else if (choice == 2) {
+            //Subtraction
+            cout << "Please enter the first number to subtract: ";
+            cin >> a;
+            cout << "Please enter the second number to subtract: ";
+            cin >> b;
+            comp.subtract(a, b);
+        }
+        else if (choice == 3) {
+            //Multiply
+            cout << "Please enter the first number to multiply: ";
+            cin >> a;
+            cout << "Please enter the second number to multiply: ";
+            cin >> b;
+            comp.multiply(a, b);
 
-    }
-    else if (choice == 6) {
-        //Areas
+        }
+        else if (choice == 4) {
+            //Divide
+            cout << "Please enter the first number to divide: ";
+            cin >> a;
+            cout << "Please enter the second number to divide: ";
+            cin >> b;
+            if (b == 0) {
+                cout << "You cannot divide by zero, please try again" << endl << "Please enter the second number to divide: ";
+                cin >> b;
+                comp.divide(a, b);
+            }
+            else {
+                comp.divide(a, b);
+            }
 
-    }
-    else if (choice == 7) {
-        exit(0);
-    }
+        }
+        else if (choice == 5) {
+            //Areas
+
+        }
+        else if (choice == 6) {
+            exit(0);
+        }
+    } while (choice != 6);
 
 
 	return 0;
