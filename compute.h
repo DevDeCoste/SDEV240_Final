@@ -10,6 +10,8 @@ class compute
 public:
 
     double add(double a, double b) {
+        double total = a + b;
+        std::cout << "Sum: " << total;
         return a + b;
     }
 
