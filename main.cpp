@@ -19,6 +19,7 @@ compute comp;
 int main() {
 
 	//This is a test comment for git purposes
+	//Another quick test
 	alert.displayMenu();
 
 	cin >> choice;
