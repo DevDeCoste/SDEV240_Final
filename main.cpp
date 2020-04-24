@@ -4,8 +4,10 @@
 
 #include <iostream>
 #include <stdlib.h>
+#include <stdexcept> 
 #include "compute.h"
 #include "alerts.h"
+
 
 using namespace std;
 
@@ -23,8 +25,6 @@ compute comp;
 
 
 int main() {
-
-    bool repeat = true;
 
     do
     {
@@ -64,16 +64,18 @@ int main() {
             cin >> a;
             cout << "Please enter the second number to divide: ";
             cin >> b;
-            if (b == 0) {
-                cout << "You cannot divide by zero, please try again" << endl << "Please enter the second number to divide: ";
-                cin >> b;
-                comp.divide(a, b);
-            }
-            else {
-                comp.divide(a, b);
-            }
 
-        }
+            try {
+                if (a == 0 || b == 0) {
+                    throw runtime_error("Math error: Attempted to divide by Zero\n");
+                }
+                comp.divide(a, b);
+            } catch (runtime_error& e) {
+                cout << "Exception occurred" << endl
+                    << e.what();
+            } // End Catch
+                
+        } // End Divide Else
         else if (choice == 5) {
             //Areas
 

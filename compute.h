@@ -3,6 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <stdexcept>
 
 
 class compute
@@ -28,6 +29,7 @@ public:
     }
 
     double divide(double a, double b) {
+
         double total = a / b;
         std::cout << "Quotient: " << total << std::endl;
         return a / b;
