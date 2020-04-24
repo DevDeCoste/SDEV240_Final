@@ -9,17 +9,18 @@
 
 using namespace std;
 
-
+// Method Constructors
 int getChoice(int, int);
 
+// Variables
 double choice;
+double a, b;
 
-
+//Class Objects
 alerts alert;
-
 compute comp;
 
-double a, b;
+
 
 int main() {
 
@@ -27,8 +28,7 @@ int main() {
 
     do
     {
-        //This is a test comment for git purposes
-    //Another quick test
+
         alert.displayMenu();
 
         choice = getChoice(1, 6);
