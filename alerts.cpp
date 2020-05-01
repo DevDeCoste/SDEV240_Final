@@ -11,3 +11,9 @@ using namespace std;
 			<< "Choice: ";
 	}
 
+	void alerts::displayAreaMenu() {
+		cout << "Program to calculate the area of objects " << endl << "1 -- Square" << endl
+			<< "2 -- Circle" << endl << "3 -- Right Triangle" << endl << "4 -- Quit" << endl <<
+			"Choice: ";
+	}
+

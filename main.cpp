@@ -1,5 +1,6 @@
 // Final main.cpp 
 // This program allows a user to choose a type of calculation, then inputs their variables and the calculator will find the solution
+// The only known bug is I could not figure out how to validate user input to be an integer so currently if you enter a letter the program will break.
 // Dev DeCoste
 
 #include <iostream>
@@ -16,6 +17,7 @@ int getChoice(int, int);
 
 // Variables
 double choice;
+double areaChoice;
 double a, b;
 
 //Class Objects
@@ -38,6 +40,7 @@ int main() {
             cin >> a;
             cout << "Please enter the second number to add: ";
             cin >> b;
+            
             comp.add(a, b);
         }
         else if (choice == 2) {
@@ -76,7 +79,26 @@ int main() {
                 
         } // End Divide Else
         else if (choice == 5) {
-            //Areas
+            //Area
+            do {
+                alert.displayAreaMenu();
+                areaChoice = getChoice(1, 4);
+                if (areaChoice == 1) {
+                    cout << "Area = " << comp.findSquareArea() << endl;
+                }
+                else if (areaChoice == 2) {
+                    cout << "Area = " << comp.findCircleArea() << endl;
+                }
+                else if (areaChoice == 3) {
+                    cout << "Area = " << comp.findTriangleArea() << endl;
+                }
+                else if (areaChoice == 4) {
+                    
+                    alert.displayMenu();
+
+                    choice = getChoice(1, 6);
+                }
+            } while (areaChoice != 4);
 
         }
         else if (choice == 6) {
