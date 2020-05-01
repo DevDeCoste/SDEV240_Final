@@ -22,7 +22,6 @@ double a, b;
 alerts alert;
 compute comp;
 
-//This is a test push for git
 
 int main() {
 
